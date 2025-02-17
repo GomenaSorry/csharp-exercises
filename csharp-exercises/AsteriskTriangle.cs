@@ -2,23 +2,13 @@
 {
     public partial class Program
     {
-        public class AsteriskTriangle       
+        public class AsteriskTriangle
         {
             public static void Write(int length)
             {
-                int level = 0;
-                while (level < length)
+                for (int level = 1; level <= length; level++)
                 {
-                    level++;
-                    for (int i = 0; i < (length - level); i++)
-                    {
-                        Console.Write(" ");
-                    }
-                    for (int j = 0; j < level; j++)
-                    {
-                        Console.Write("*");
-                    }
-                    Console.Write("\n");
+                    Console.WriteLine(new string(' ', length - level) + new string('*', level));
                 }
             }
         }
